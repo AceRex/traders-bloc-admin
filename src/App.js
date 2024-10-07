@@ -4,14 +4,15 @@ import {
   Route,
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import KYCReview from "./page/kycReview.tsx";
-import ReviewDocument from "./page/reviewDocument.tsx";
-import Preview from "./page/preview.tsx";
 // import ProtectedRoute from "./protecteroute";
 
 const Login = lazy(() => import("./page/login.tsx"));
 const ForgotPassword = lazy(() => import("./page/passwordReset.tsx"));
 const Dashboard = lazy(() => import("./page/dashboard.tsx"));
+const KYCReview = lazy(() => import("./page/kycReview.tsx"));
+const ReviewDocument = lazy(() => import("./page/reviewDocument.tsx"));
+const Preview = lazy(() => import("./page/preview.tsx"));
+const ReviewInvoice = lazy(() => import("./page/reviewInvoice.tsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -61,6 +62,14 @@ const router = createBrowserRouter(
         element={
           <Suspense fallback={<h1>Loading</h1>}>
             <Preview />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/invoice"
+        element={
+          <Suspense fallback={<h1>Loading</h1>}>
+            <ReviewInvoice />
           </Suspense>
         }
       />
