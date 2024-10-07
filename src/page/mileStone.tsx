@@ -48,7 +48,7 @@ function Milestone() {
           </div>
           <h3 className="font-bold text-lg my-4">Linked Invoices</h3>
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%] flex flex-row items-center gap-4">
+            <div className="lg:w-[40%] w-full flex flex-row items-center gap-4">
               <div className="p-2 bg-bg_light rounded-lg">
                 <CiStickyNote size={25} />
               </div>
@@ -70,7 +70,7 @@ function Milestone() {
           </div>
           <h3 className="font-bold text-lg my-4">Payment Details</h3>
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%] flex flex-row items-center gap-4">
+            <div className="lg:w-[40%] w-full flex flex-row items-center gap-4">
               <div className="p-2 bg-bg_light rounded-lg">
                 <BsCalendar2Date size={25} />
               </div>
@@ -81,7 +81,7 @@ function Milestone() {
             </div>
           </div>{" "}
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%] flex flex-row items-center gap-4">
+            <div className="lg:w-[40%] w-full flex flex-row items-center gap-4">
               <div className="p-2 bg-bg_light rounded-lg">
                 <PiMoneyFill size={25} />
               </div>
@@ -93,7 +93,7 @@ function Milestone() {
           </div>
           <h3 className="font-bold text-lg my-4">Supporting Documents</h3>
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%] flex flex-row items-center gap-4">
+            <div className="lg:w-[40%] w-full flex flex-row items-center gap-4">
               <div className="p-2 bg-bg_light rounded-lg">
                 <CiStickyNote size={25} />
               </div>
@@ -101,7 +101,7 @@ function Milestone() {
             </div>
           </div>{" "}
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%] flex flex-row items-center gap-4">
+            <div className="lg:w-[40%] w-full flex flex-row items-center gap-4">
               <div className="p-2 bg-bg_light rounded-lg">
                 <CiStickyNote size={25} />
               </div>
@@ -110,7 +110,7 @@ function Milestone() {
           </div>
           <h3 className="font-bold text-lg my-4">Reason for Rejection</h3>
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%]">
+            <div className="lg:w-[40%] w-full">
               <Input type="textarea" rows={5} onChange={() => {}} />
             </div>
           </div>

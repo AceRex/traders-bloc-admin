@@ -3,10 +3,11 @@ import { VscBell } from "react-icons/vsc";
 import { useNavigate } from "react-router-dom";
 import profileImage from "../../assets/images/profileImg.png";
 import { CiMenuBurger } from "react-icons/ci";
-import React from "react";
+import React, {useState} from "react";
 
 function MainHeader() {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false)
   const links = [
     { title: "Home", url: "/" },
     { title: "KYC", url: "/kyc" },
@@ -15,7 +16,7 @@ function MainHeader() {
     { title: "Funding", url: "/funding" },
   ];
   return (
-    <div className="border-b border-b-bg-light px-12 p-4 flex flex-row items-center justify-between">
+    <div className="border-b border-b-bg-light relative px-12 p-4 flex flex-row items-center justify-between">
       <p className="font-extrabold text-xl tracking-tight w-[50%] lg:w-[20%]">
         Traders by bloc - Admin
       </p>
@@ -42,7 +43,17 @@ function MainHeader() {
         </ul>
       </div>
       <div className="lg:hidden">
-        <CiMenuBurger size={18} />
+        <CiMenuBurger size={18} onClick={() => setOpen(!open)}/>
+          
+          {open && <ul className="absolute w-full h-[70vh] left-0 top-20 bg-bg_light flex flex-col text-center list-none">{ links.map(({ title, url }) => (
+            <li onClick={() => navigate(`${url}`)} className="cursor-pointer my-8">
+              {title}
+            </li>
+            
+          ))}
+          </ul>}
+           
+         
       </div>
     </div>
   );

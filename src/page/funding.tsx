@@ -24,18 +24,18 @@ function Funding() {
             Request #001
           </h1>
           <h3 className="font-bold text-lg my-3">Requested Funding</h3>
-          <div className="border-t border-t-bg_light p-4 grid grid-cols-4">
-            <div className="lg:basis-1/4 basis-2/4 flex flex-col gap-3">
+          <div className="border-t border-t-bg_light p-4 flex flex row">
+            <div className="w-[50%] flex flex-col gap-3">
               <p className="text-text_light -mb-3">Requested Amount</p>
               <p className="text-text text-lg">$1,000.00</p>
             </div>
-            <div className="lg:basis-3/4 basis-2/4 flex flex-col gap-3">
+            <div className="w-[50%] flex flex-col gap-3">
               <p className="text-text_light -mb-3">Invoice</p>
               <p className="text-text text-lg">Inv #123</p>
             </div>
           </div>
-          <div className="border-t border-t-bg_light p-4 grid grid-cols-4">
-            <div className="lg:basis-1/4 basis-2/4 flex flex-col gap-3">
+          <div className="border-t border-t-bg_light p-4 flex flex row">
+            <div className="w-[50%] flex flex-col gap-3">
               <p className="text-text_light -mb-3">Milestone</p>
               <p className="text-text text-lg">Milestone 1</p>
             </div>
@@ -46,14 +46,14 @@ function Funding() {
             will have to submit a new request.
           </p>
           <div className="my-8 flex lg:justify-end">
-            <div className="w-[40%] flex flex-col lg:flex-row gap-3">
+            <div className="w-full lg:w-[40%] flex flex-row gap-3">
               <Button text="Approve" onClick={() => {}} />
               <Button text="Reject" color="primary" onClick={() => {}} />
             </div>
           </div>
           <h3 className="font-bold text-lg my-3">Actions</h3>
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%] flex flex-row items-center gap-4">
+            <div className="w-full lg:w-[40%] flex flex-row items-center gap-4">
               <div className="p-2 bg-bg_light rounded-lg">
                 <PiUsers size={25} />
               </div>
@@ -62,7 +62,7 @@ function Funding() {
             <GoChevronRight size={25} onClick={() => navigate('/profile')}/>
           </div>
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%] flex flex-row items-center gap-4">
+            <div className="w-full lg:w-[40%] flex flex-row items-center gap-4">
               <div className="p-2 bg-bg_light rounded-lg">
                 <MdOutlineStickyNote2 size={25} />
               </div>
@@ -71,7 +71,7 @@ function Funding() {
             <GoChevronRight size={25} onClick={() => navigate("/funding")}/>
           </div>
           <div className="flex flex-row items-center justify-between py-4">
-            <div className="w-[40%] flex flex-row items-center gap-4">
+            <div className="w-full lg:w-[40%] flex flex-row items-center gap-4">
               <div className="p-2 bg-bg_light rounded-lg">
                 <MdOutlineStickyNote2 size={25} />
               </div>

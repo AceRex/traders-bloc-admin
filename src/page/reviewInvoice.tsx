@@ -24,8 +24,8 @@ function ReviewInvoice() {
             <h3 className="font-bold text-lg">Business Name</h3>
             <h3 className="font-bold text-lg">Invoice details</h3>
           </div>
-          <div className="border-t border-t-bg_light p-4 grid grid-cols-4">
-            <div className="lg:basis-1/4 basis-2/4 flex flex-col gap-3">
+          <div className="border-t border-t-bg_light p-4 flex flex row">
+            <div className="w-[50%] flex flex-col gap-3">
               <p className="text-text_light -mb-3">Supplier</p>
               <p className="text-text text-lg">Dunder Mifflin</p>
             </div>
@@ -34,22 +34,22 @@ function ReviewInvoice() {
               <p className="text-text text-lg">Jan 1, 2023</p>
             </div>
           </div>
-          <div className="border-t border-t-bg_light p-4 grid grid-cols-4">
-            <div className="llg:basis-1/4 basis-2/4 flex flex-col gap-3">
+          <div className="border-t border-t-bg_light p-4 flex flex row">
+            <div className="w-[50%] flex flex-col gap-3">
               <p className="text-text_light -mb-3">Due date</p>
               <p className="text-text text-lg">Feb 1, 2023</p>
             </div>
-            <div className="lg:basis-3/4 basis-2/4 flex flex-col gap-3">
+            <div className="w-[50%] flex flex-col gap-3">
               <p className="text-text_light -mb-3">Invoice total</p>
               <p className="text-text text-lg">$5,000</p>
             </div>
           </div>
-          <div className="border-t border-t-bg_light p-4 grid grid-cols-4">
-            <div className="lg:basis-1/4 basis-2/4 flex flex-col gap-3">
+          <div className="border-t border-t-bg_light p-4 flex flex row">
+            <div className="w-[50%] flex flex-col gap-3">
               <p className="text-text_light -mb-3">Total paid</p>
               <p className="text-text text-lg">$0</p>
             </div>
-            <div className="lg:basis-3/4 basis-2/4 flex flex-col gap-3">
+            <div className="w-[50%] flex flex-col gap-3">
               <p className="text-text_light -mb-3">Total unpaid</p>
               <p className="text-text text-lg">$5,000</p>
             </div>
@@ -85,7 +85,7 @@ function ReviewInvoice() {
           </div>
           <h3 className="font-bold text-lg">Action</h3>
           <div className="my-4 flex lg:justify-end">
-            <div className="w-[40%] flex flex-col lg:flex-row gap-3">
+            <div className="w-full lg:w-[40%] flex flex-row gap-3">
               <Button text="Approve" onClick={() => {}} />
               <Button text="Reject" color="primary" onClick={() => {}} />
             </div>
