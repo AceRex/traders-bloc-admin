@@ -13,6 +13,7 @@ const KYCReview = lazy(() => import("./page/kycReview.tsx"));
 const ReviewDocument = lazy(() => import("./page/reviewDocument.tsx"));
 const Preview = lazy(() => import("./page/preview.tsx"));
 const ReviewInvoice = lazy(() => import("./page/reviewInvoice.tsx"));
+const Funding = lazy(() => import("./page/funding.tsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -70,6 +71,14 @@ const router = createBrowserRouter(
         element={
           <Suspense fallback={<h1>Loading</h1>}>
             <ReviewInvoice />
+          </Suspense>
+        }
+      />{" "}
+      <Route
+        path="/funding"
+        element={
+          <Suspense fallback={<h1>Loading</h1>}>
+            <Funding />
           </Suspense>
         }
       />
