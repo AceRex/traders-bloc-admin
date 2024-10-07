@@ -14,6 +14,7 @@ const ReviewDocument = lazy(() => import("./page/reviewDocument.tsx"));
 const Preview = lazy(() => import("./page/preview.tsx"));
 const ReviewInvoice = lazy(() => import("./page/reviewInvoice.tsx"));
 const Funding = lazy(() => import("./page/funding.tsx"));
+const Milestone = lazy(() => import("./page/mileStone.tsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -79,6 +80,13 @@ const router = createBrowserRouter(
         element={
           <Suspense fallback={<h1>Loading</h1>}>
             <Funding />
+          </Suspense>
+        }
+      />  <Route
+        path="/milestone"
+        element={
+          <Suspense fallback={<h1>Loading</h1>}>
+            <Milestone />
           </Suspense>
         }
       />
