@@ -6,6 +6,7 @@ import {
 import { lazy, Suspense } from "react";
 import KYCReview from "./page/kycReview.tsx";
 import ReviewDocument from "./page/reviewDocument.tsx";
+import Preview from "./page/preview.tsx";
 // import ProtectedRoute from "./protecteroute";
 
 const Login = lazy(() => import("./page/login.tsx"));
@@ -47,11 +48,19 @@ const router = createBrowserRouter(
           </Suspense>
         }
       />
-        <Route
+      <Route
         path="/review_document"
         element={
           <Suspense fallback={<h1>Loading</h1>}>
             <ReviewDocument />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/preview"
+        element={
+          <Suspense fallback={<h1>Loading</h1>}>
+            <Preview />
           </Suspense>
         }
       />

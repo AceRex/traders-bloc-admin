@@ -11,6 +11,7 @@ module.exports = {
         bg_light: "#ededed",
         success: "#098708",
         danger: "#e82109",
+        info: "#1a80e5"
       },
     },
   },
