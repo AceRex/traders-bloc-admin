@@ -3,35 +3,30 @@ import SignupHeader from "../components/headers/signupHeader.tsx";
 import Input from "../components/form/input.tsx";
 import Subtext from "../components/subtext.tsx";
 import Button from "../components/form/button.tsx";
-import { Link } from "react-router-dom";
 
-function Login() {
+function ForgotPassword() {
   return (
     <main>
       <SignupHeader />
       <div className="w-[60%] m-auto p-12">
         <div className="flex flex-col mt-4 items-center place-content-center">
-          <h1 className="font-bold text-2xl">Welcome!</h1>
-          <p className="font-bold text-2xl">
-            Please enter your Default Email and Password
-          </p>
+          <h1 className="font-bold text-2xl">Finish setting up your account</h1>
+          <Subtext text="Secure your account with a strong password to get started." />
           <form className="w-[70%] my-12">
             <Input
               type="text"
-              label={"Email"}
+              label={"New Password"}
               inputWidth="w-full"
               onChange={() => {}}
             />
             <Input
               type="password"
-              label={"Password"}
+              label={"Confirm New Password"}
               inputWidth="w-full"
               onChange={() => {}}
+              subText="Must be at least 8 characters, include a number, and a special character."
             />
-            <Link to="/forgot-password">
-              <Subtext text="Forgot Password?" />
-            </Link>
-            <Button text="Login to Dashboard" className="my-6" />
+            <Button text="Set Password" className="my-6" />
           </form>
         </div>
       </div>
@@ -39,4 +34,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default ForgotPassword;

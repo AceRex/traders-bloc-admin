@@ -8,17 +8,16 @@ import React from "react";
 function MainHeader() {
   const navigate = useNavigate();
   const links = [
-    { title: "Dashboard", url: "/" },
-    { title: "Invoices", url: "/invoice_submit" },
-    { title: "Payment", url: "/funding_request" },
-    { title: "Funding", url: "/funding_request" },
-    { title: "Transaction", url: "/transaction_tracking" },
-    { title: "Report", url: "/transaction_tracking" },
+    { title: "Home", url: "/" },
+    { title: "KYC", url: "/kyc" },
+    { title: "Invoice", url: "/invoice" },
+    { title: "Milestone", url: "/milestone" },
+    { title: "Funding", url: "/funding" },
   ];
   return (
     <div className="border-b border-b-bg-light px-12 p-4 flex flex-row items-center justify-between">
       <p className="font-extrabold text-xl tracking-tight w-[50%] lg:w-[20%]">
-        Traders by bloc
+        Traders by bloc - Admin
       </p>
       <div className="hidden lg:block w-[50%] lg:w-[80%]">
         <ul className="flex flex-row justify-end items-center text-sm gap-6">
@@ -27,9 +26,6 @@ function MainHeader() {
               {title}
             </li>
           ))}
-          <div className="bg-bg_light p-2 rounded-xl cursor-pointer">
-            <IoSearchOutline size={17} />
-          </div>
           <div className="bg-bg_light p-2 rounded-xl cursor-pointer">
             <VscBell size={17} />
           </div>
